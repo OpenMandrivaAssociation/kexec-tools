@@ -1,11 +1,11 @@
 %define name kexec-tools
 %define version 1.101
-%define mdkrelease 2mdk
+%define rel 3
 
 Summary:	Tool for starting new kernel without reboot
 Name:		%{name}
 Version:	%{version}
-Release:	%{mdkrelease}
+Release:	%mkrel %{rel}
 License: 	GPL
 Group: 		System/Configuration/Hardware
 #http://developer.osdl.org/rddunlap/kexec/kexec-tools-%{version}.tar.bz2
