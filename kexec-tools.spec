@@ -12,6 +12,7 @@ Group: 		System/Configuration/Hardware
 Source0:	http://www.xmission.com/~ebiederm/files/kexec/%{name}-%{version}.tar.bz2
 URL:		http://www.xmission.com/~ebiederm/files/kexec/
 Requires:	kernel
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-build
 
 %description
 kexec is a set of system calls that allows you to load another kernel
