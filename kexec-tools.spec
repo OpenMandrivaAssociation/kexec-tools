@@ -1,18 +1,23 @@
 %define name kexec-tools
-%define version 1.101
-%define rel 3
+%define version 2.0.0
+%define rel 1
 
 Summary:	Tool for starting new kernel without reboot
 Name:		%{name}
 Version:	%{version}
 Release:	%mkrel %{rel}
-License: 	GPL
+License: 	GPL v2
 Group: 		System/Configuration/Hardware
 #http://developer.osdl.org/rddunlap/kexec/kexec-tools-%{version}.tar.bz2
-Source0:	http://www.xmission.com/~ebiederm/files/kexec/%{name}-%{version}.tar.bz2
-URL:		http://www.xmission.com/~ebiederm/files/kexec/
+Source0:	http://www.kernel.org/pub/linux/kernel/people/horms/kexec-tools/%{name}-%{version}.tar.bz2
+URL:		http://www.kernel.org/pub/linux/kernel/people/horms/kexec-tools/
 Requires:	kernel
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-build
+
+# (misc) i will try to fix after the version freeze
+
+%define _disable_ld_no_undefined 1
+%define _disable_ld_as_needed 1
 
 %description
 kexec is a set of system calls that allows you to load another kernel
@@ -29,10 +34,7 @@ generic code should work on any architecture.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/sbin
-
-install objdir/build/sbin/{kexec,kdump} $RPM_BUILD_ROOT/sbin
-install objdir/build/lib/kexec-tools/kexec_test $RPM_BUILD_ROOT/sbin
+%makeinstall
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -40,5 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc TODO News
-%attr(755,root,root) /sbin/*
+%_libdir/%name/kexec_test
+%_sbindir/*
 
