@@ -1,6 +1,8 @@
 %define name kexec-tools
 %define version 2.0.0
-%define rel 2
+%define rel 3
+
+%define _sbindir /sbin
 
 Summary:	Tool for starting new kernel without reboot
 Name:		%{name}
@@ -23,7 +25,7 @@ generic code should work on any architecture.
 
 %prep
 %setup -q
-%patch -p0
+%patch0 -p0
 
 %build
 %configure2_5x
@@ -32,6 +34,9 @@ generic code should work on any architecture.
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
+mkdir -p -m755 $RPM_BUILD_ROOT%{_mandir}/man8/
+install -m 644 kexec/kexec.8 $RPM_BUILD_ROOT%{_mandir}/man8/kexec.8
+install -m 644 kdump/kdump.8 $RPM_BUILD_ROOT%{_mandir}/man8/kdump.8
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -39,6 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc TODO News
+%_mandir/*/*.*
 %_libdir/%name/kexec_test
 %_sbindir/*
 
