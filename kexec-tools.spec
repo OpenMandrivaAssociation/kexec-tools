@@ -1,6 +1,6 @@
 %define name kexec-tools
 %define version 2.0.0
-%define rel 3
+%define rel 4
 
 %define _sbindir /sbin
 
@@ -45,6 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc TODO News
 %_mandir/*/*.*
-%_libdir/%name/kexec_test
-%_sbindir/*
+%attr(0755, root, root) %_libdir/%name/kexec_test
+%attr(0755, root, root) %_sbindir/*
 
