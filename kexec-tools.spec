@@ -1,6 +1,6 @@
 %define name kexec-tools
 %define version 2.0.0
-%define rel 4
+%define rel 5
 
 %define _sbindir /sbin
 
@@ -13,6 +13,7 @@ Group: 		System/Configuration/Hardware
 #http://developer.osdl.org/rddunlap/kexec/kexec-tools-%{version}.tar.bz2
 Source0:	http://www.kernel.org/pub/linux/kernel/people/horms/kexec-tools/%{name}-%{version}.tar.bz2
 Patch0:     kexec-tools-fix_as_needed.patch
+Patch1:	    kexec-tools-2.0.0-disable-kexec-test.patch
 URL:		http://www.kernel.org/pub/linux/kernel/people/horms/kexec-tools/
 Requires:	kernel
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-build
@@ -26,6 +27,7 @@ generic code should work on any architecture.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p1
 
 %build
 %configure2_5x
@@ -45,6 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc TODO News
 %_mandir/*/*.*
-%attr(0755, root, root) %_libdir/%name/kexec_test
 %attr(0755, root, root) %_sbindir/*
 
