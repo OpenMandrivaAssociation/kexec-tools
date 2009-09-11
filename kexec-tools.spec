@@ -1,6 +1,6 @@
 %define name kexec-tools
 %define version 2.0.0
-%define rel 5
+%define rel 6
 
 %define _sbindir /sbin
 
