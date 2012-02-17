@@ -87,12 +87,30 @@ mkdir -p %buildroot%{_unitdir}
 mkdir -p -m755 %buildroot%{_bindir}
 install -m 755 %{SOURCE1} %buildroot%{_bindir}/kdumpctl
 
-SYSCONFIG=%_sourcedir/kdump.sysconfig.%{_target_cpu}
-[ -f $SYSCONFIG ] || SYSCONFIG=%_sourcedir/kdump.sysconfig.%{_arch}
-[ -f $SYSCONFIG ] || SYSCONFIG=%_sourcedir/kdump.sysconfig
+%ifarch x86_64
+%define SYSCONFIG %SOURCE3
+[ -f $SYSCONFIG ] || SYSCONFIG=%SOURCE3
+[ -f $SYSCONFIG ] || SYSCONFIG=%SOURCE2
+%else
+
+%ifarch %{ix86}
+%define SYSCONFIG %SOURCE4
+[ -f $SYSCONFIG ] || SYSCONFIG=%SOURCE4
+[ -f $SYSCONFIG ] || SYSCONFIG=%SOURCE2
+%else
+
+%ifarch ppc64
+%define SYSCONFIG %SOURCE5
+[ -f $SYSCONFIG ] || SYSCONFIG=%SOURCE5
+[ -f $SYSCONFIG ] || SYSCONFIG=%SOURCE2
+%else
+%endif
+%endif
+%endif
+
+install -m 644 %{SYSCONFIG} %buildroot%{_sysconfdir}/sysconfig/kdump
 
 
-install -m 644 $SYSCONFIG %buildroot%{_sysconfdir}/sysconfig/kdump
 install -m 755 %{SOURCE7} %buildroot/sbin/mkdumprd
 install -m 644 %{SOURCE8} %buildroot%{_sysconfdir}/kdump.conf
 install -m 644 kexec/kexec.8 %buildroot%{_mandir}/man8/kexec.8
