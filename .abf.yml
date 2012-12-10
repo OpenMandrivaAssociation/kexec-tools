@@ -1,19 +1,5 @@
 sources:
-  "98-kexec.rules:"	b17e7bd0343594623a3c608616bcd02d323f02ac
-  "dracut-files.tbz2:"	1e13837cd1ebf0e5f9e6c46f50daa098fbb0645f
-  "firstboot_kdump.py:"	5468eae90bbef3d5a729eddd434fc7197d818582
-  "kdump.conf:"	b8c2a3b603eab48d6004b5ceb788e77cdf07e34c
-  "kdump.conf.5:"	09eaf43abd52ea9ac8cdc01e69a14c6c91864be5
-  "kdumpctl:"	e290882c20474709545d2a06adc72c94bda3e9af
-  "kdump.service:"	7a226f04b04daa090e3e13c0de751496af1c754d
-  "kdump.sysconfig:"	216a75fc564019b6fb00d56a9e65711a810b9716
-  "kdump.sysconfig.i386:"	1d1d73e6c2f9afdc41e99d40a5a559ac42381036
-  "kdump.sysconfig.ia64:"	d7c90f96ec8e66002fddf86428c8ff84c3a88ff3
-  "kdump.sysconfig.ppc64:"	0801d7a7b1ee32a3ffc00c12472df87f0600bd9d
-  "kdump.sysconfig.x86_64:"	1d1d73e6c2f9afdc41e99d40a5a559ac42381036
-  "kexec-kdump-howto.txt:"	937ca6b861779c6312826c3c3fb95a44a67c96f2
-  "kexec-tools-2.0.3.tar.bz2:"	131af93d6d89778bdf3dbe33384184ff153f29a1
-  "kexec-tools-po.tar.gz:"	b459d299afedca93ca14453a1b15ca5c04fb57c9
-  "makedumpfile-1.4.2.tar.gz:"	6a0deaab1f7fb308009924a75844f7aa7de9066b
-  "mkdumprd:"	80fa9438db289d7740c0f0dc8ff1e1749041f1b1
-  "mkdumprd.8:"	d6749f544f2e1d6f0be90d3cc508dbfe2e9f9532
+  "dracut-files.tbz2": 1e13837cd1ebf0e5f9e6c46f50daa098fbb0645f
+  "kexec-tools-2.0.3.tar.bz2": 131af93d6d89778bdf3dbe33384184ff153f29a1
+  "kexec-tools-po.tar.gz": b459d299afedca93ca14453a1b15ca5c04fb57c9
+  "makedumpfile-1.4.2.tar.gz": 6a0deaab1f7fb308009924a75844f7aa7de9066b

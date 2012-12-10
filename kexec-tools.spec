@@ -248,3 +248,57 @@ done
 %doc COPYING
 %doc TODO
 %doc kexec-kdump-howto.txt
+
+
+%changelog
+* Fri Feb 17 2012 Alexander Khrukin <akhrukin@mandriva.org> 2.0.3-1
++ Revision: 776089
+- *ifarch macros rpmlint fix
+- *added systemd service \n *patch with test package returned \n *ppc and ia64 arches
+- merged with fedora16
+- version update 2.0.3
+
+* Thu Mar 10 2011 Leonardo Coelho <leonardoc@mandriva.org> 2.0.0-8
++ Revision: 643537
+-add a kexec-tool service
+-add a kexec-tools service
+
+* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 2.0.0-7mdv2011.0
++ Revision: 619960
+- the mass rebuild of 2010.0 packages
+
+* Fri Sep 11 2009 Thierry Vignaud <tv@mandriva.org> 2.0.0-6mdv2010.0
++ Revision: 438095
+- rebuild
+
+* Thu Mar 05 2009 Eugeni Dodonov <eugeni@mandriva.com> 2.0.0-5mdv2009.1
++ Revision: 349455
+- Add disable-kexec-test patch from Fedora (#47890).
+
+* Thu Mar 05 2009 Eugeni Dodonov <eugeni@mandriva.com> 2.0.0-4mdv2009.1
++ Revision: 349064
+- Installing correct permissions on kexec executables.
+
+* Mon Mar 02 2009 Eugeni Dodonov <eugeni@mandriva.com> 2.0.0-3mdv2009.1
++ Revision: 347291
+- Installing kexec binaries to /sbin (#47889).
+  Added manpages.
+
+* Sat Sep 13 2008 Michael Scherer <misc@mandriva.org> 2.0.0-2mdv2009.0
++ Revision: 284438
+- cleanly fix linking error, patch 1
+
+* Sat Sep 13 2008 Michael Scherer <misc@mandriva.org> 2.0.0-1mdv2009.0
++ Revision: 284418
+- new version thanks to Tomasz Chmielewski
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sun Apr 22 2007 Michael Scherer <misc@mandriva.org> 1.101-3mdv2008.0
++ Revision: 16807
+- use %%mkrel
+
