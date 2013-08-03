@@ -1,5 +1,5 @@
 Name: kexec-tools
-Version: 2.0.3
+Version: 2.0.4
 Release: 1
 License: GPLv2
 Group: System/Configuration/Hardware
@@ -35,7 +35,8 @@ Requires(postun): systemd-units
 Requires(pre): coreutils sed zlib 
 Requires: busybox >= 1.2.0, dracut
 BuildRequires: dash 
-BuildRequires: zlib-devel elfutils-devel glib2-devel bzip2-devel
+BuildRequires: zlib-devel elfutils-devel bzip2-devel
+BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig intltool gettext 
 BuildRequires: systemd-units elfutils-static-devel
 %ifarch %{ix86} x86_64 ppc64 ia64 ppc

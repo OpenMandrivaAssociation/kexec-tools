@@ -1,5 +1,7 @@
+removed_sources:
+  kexec-tools-2.0.3.tar.bz2: 131af93d6d89778bdf3dbe33384184ff153f29a1
 sources:
-  "dracut-files.tbz2": 1e13837cd1ebf0e5f9e6c46f50daa098fbb0645f
-  "kexec-tools-2.0.3.tar.bz2": 131af93d6d89778bdf3dbe33384184ff153f29a1
-  "kexec-tools-po.tar.gz": b459d299afedca93ca14453a1b15ca5c04fb57c9
-  "makedumpfile-1.4.2.tar.gz": 6a0deaab1f7fb308009924a75844f7aa7de9066b
+  dracut-files.tbz2: 1e13837cd1ebf0e5f9e6c46f50daa098fbb0645f
+  kexec-tools-2.0.4.tar.bz2: f119507a92446bcda58b108fd7f61e6d9f187358
+  kexec-tools-po.tar.gz: b459d299afedca93ca14453a1b15ca5c04fb57c9
+  makedumpfile-1.4.2.tar.gz: 6a0deaab1f7fb308009924a75844f7aa7de9066b
