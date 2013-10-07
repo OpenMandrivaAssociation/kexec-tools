@@ -36,7 +36,7 @@ ia64 and ppc64.
 If you're reading this document, you should already have kexec-tools
 installed. If not, you install it via the following command:
 
-    # yum install kexec-tools
+    # urpmi kexec-tools
 
 Now load a kernel with kexec:
 
@@ -57,7 +57,7 @@ How to configure kdump:
 Again, we assume if you're reading this document, you should already have
 kexec-tools installed. If not, you install it via the following command:
 
-    # yum install kexec-tools
+    # urpmi kexec-tools
 
 To be able to do much of anything interesting in the way of debug analysis,
 you'll also need to install the kernel-debuginfo package, of the same arch
