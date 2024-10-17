@@ -4,7 +4,7 @@ Release: 2
 License: GPLv2
 Group: System/Configuration/Hardware
 Summary: The kexec/kdump userspace component
-Url:	 http://kernel.org/pub/linux/utils/kernel/kexec
+Url:	 https://kernel.org/pub/linux/utils/kernel/kexec
 Source0: http://kernel.org/pub/linux/utils/kernel/kexec/%{name}-%{version}.tar.bz2
 Source1: kdumpctl
 Source2: kdump.sysconfig
