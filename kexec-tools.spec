@@ -34,6 +34,11 @@ Requires(preun): systemd-units
 Requires(postun): systemd-units
 Requires(pre): coreutils sed zlib 
 Requires: busybox >= 1.2.0, dracut
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: dash 
 BuildRequires: zlib-devel elfutils-devel bzip2-devel
 BuildRequires: pkgconfig(glib-2.0)
